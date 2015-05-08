@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+// Controllers
+#import "CCCryptoListViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -20,9 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    self.window.rootViewController = vc;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CCCryptoListViewController alloc] init]];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -55,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE9F36481AFD2DC2005F19A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEA855F91AFD1BD200274F28 /* Images.xcassets */,
+				BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE9F36491AFD2DC9005F19A2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BEA855ED1AFD1BD200274F28 /* AppDelegate.h */,
+				BEA855EE1AFD1BD200274F28 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		BEA855DD1AFD1BD200274F28 = {
 			isa = PBXGroup;
 			children = (
@@ -76,10 +94,8 @@
 		BEA855E81AFD1BD200274F28 /* CryptoConverter */ = {
 			isa = PBXGroup;
 			children = (
-				BEA855ED1AFD1BD200274F28 /* AppDelegate.h */,
-				BEA855EE1AFD1BD200274F28 /* AppDelegate.m */,
-				BEA855F91AFD1BD200274F28 /* Images.xcassets */,
-				BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */,
+				BE9F36481AFD2DC2005F19A2 /* Resources */,
+				BE9F36491AFD2DC9005F19A2 /* Application */,
 				BEA855E91AFD1BD200274F28 /* Supporting Files */,
 			);
 			path = CryptoConverter;
@@ -240,6 +256,7 @@
 				BEA855FC1AFD1BD200274F28 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,6 +415,7 @@
 				BEA8560E1AFD1BD200274F28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEA8560F1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +424,7 @@
 				BEA856111AFD1BD200274F28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

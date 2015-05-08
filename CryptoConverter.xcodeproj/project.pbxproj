@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D2F70146FCCCE82B42E41AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C240EE8DF111B09E4CA2F4 /* libPods.a */; };
 		BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */; };
 		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
 		BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */; };
@@ -31,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C27222A60C7718AF9F60C24 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		69C240EE8DF111B09E4CA2F4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6BF039429340FA78066ECB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE9F364D1AFD2FD1005F19A2 /* CCCryptoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListViewController.h; path = Controllers/CCCryptoListViewController.h; sourceTree = "<group>"; };
 		BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewController.m; path = Controllers/CCCryptoListViewController.m; sourceTree = "<group>"; };
 		BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewController.h; path = Controllers/CCCryptoDetailsViewController.h; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2F70146FCCCE82B42E41AB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC514332B70DBC63404B810 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69C240EE8DF111B09E4CA2F4 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE9F36481AFD2DC2005F19A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,8 @@
 				BEA855E81AFD1BD200274F28 /* CryptoConverter */,
 				BEA856051AFD1BD200274F28 /* CryptoConverterTests */,
 				BEA855E71AFD1BD200274F28 /* Products */,
+				C73286D7659414095327FEDF /* Pods */,
+				1EC514332B70DBC63404B810 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +212,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C73286D7659414095327FEDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C27222A60C7718AF9F60C24 /* Pods.debug.xcconfig */,
+				9F6BF039429340FA78066ECB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEA8560C1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverter" */;
 			buildPhases = (
+				3FC7F32A80DA39AEEC230576 /* Check Pods Manifest.lock */,
 				BEA855E21AFD1BD200274F28 /* Sources */,
 				BEA855E31AFD1BD200274F28 /* Frameworks */,
 				BEA855E41AFD1BD200274F28 /* Resources */,
+				B60C401D7990285752E76EA5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +317,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FC7F32A80DA39AEEC230576 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B60C401D7990285752E76EA5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEA855E21AFD1BD200274F28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -374,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -420,6 +479,7 @@
 		};
 		BEA8560D1AFD1BD200274F28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C27222A60C7718AF9F60C24 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CryptoConverter/Info.plist;
@@ -430,6 +490,7 @@
 		};
 		BEA8560E1AFD1BD200274F28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6BF039429340FA78066ECB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CryptoConverter/Info.plist;

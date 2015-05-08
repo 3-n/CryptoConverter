@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class CCCryptoListViewModel;
+
 @interface CCCryptoListViewController : UITableViewController
+
+@property (nonatomic, strong) CCCryptoListViewModel *viewModel;
 
 @end

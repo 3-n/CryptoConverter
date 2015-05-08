@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class CCCryptoDetailsViewModel;
+
 @interface CCCryptoDetailsViewController : UITableViewController
+
+@property (nonatomic, strong) CCCryptoDetailsViewModel *viewModel;
 
 @end

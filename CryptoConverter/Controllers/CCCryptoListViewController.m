@@ -11,8 +11,15 @@
 // Controllers
 #import "CCCryptoDetailsViewController.h"
 
+// ViewModels
+#import "CCCryptoListViewModel.h"
+
+// Models
+#import "CCCrypto.h"
+
 
 static NSString* const CCCryptoCellId = @"CCCryptoCellId";
+
 
 @interface CCCryptoListViewController ()
 
@@ -20,8 +27,18 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 
 @implementation CCCryptoListViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _viewModel = [CCCryptoListViewModel new];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _viewModel = [CCCryptoListViewModel new];
     
     self.title = NSLocalizedString(@"Select Crypto", nil);
     
@@ -31,19 +48,44 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return CCSectionCount;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    switch (section) {
+        case CCPopular:
+            return self.viewModel.cryptosPopular.count;
+            break;
+        case CCAll:
+            return self.viewModel.cryptosAll.count;
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
     
-    cell.textLabel.text = @"cell";
+    CCCrypto *crypto = [self cryptoForIndexPath:indexPath];
+    cell.textLabel.text = crypto.code.uppercaseString;
     
     return cell;
+}
+
+- (CCCrypto *)cryptoForIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case CCPopular:
+            return self.viewModel.cryptosPopular[indexPath.row];
+            break;
+        case CCAll:
+            return self.viewModel.cryptosAll[indexPath.row];
+            break;
+        default:
+            return nil;
+            break;
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -51,7 +93,10 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController pushViewController:[[CCCryptoDetailsViewController alloc] init] animated:YES];
+    CCCryptoDetailsViewController *detailsController = [[CCCryptoDetailsViewController alloc] initWithStyle:UITableViewStylePlain];
+    detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
+    
+    [self.navigationController pushViewController:detailsController animated:YES];
 }
 
 @end

@@ -8,6 +8,13 @@
 
 #import "CCCryptoDetailsViewController.h"
 
+// ViewModels
+#import "CCCryptoDetailsViewModel.h"
+
+// Models
+#import "CCCrypto.h"
+#import "CCFiatRate.h"
+
 
 static NSString* const CCFiatCellId = @"CCFiatCellId";
 
@@ -32,13 +39,15 @@ static NSString* const CCFiatCellId = @"CCFiatCellId";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return self.viewModel.fiatRates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCFiatCellId forIndexPath:indexPath];
     
-    cell.textLabel.text = @"fiat cell";
+    CCFiatRate *fiatRate = self.viewModel.fiatRates[indexPath.row];
+    
+    cell.textLabel.text = fiatRate.code.uppercaseString;
     
     return cell;
 }

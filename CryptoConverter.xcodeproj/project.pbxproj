@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */; };
 		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
+		BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */; };
+		BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365A1AFD374C005F19A2 /* CCCrypto.m */; };
+		BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */; };
+		BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */; };
 		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
 		BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EE1AFD1BD200274F28 /* AppDelegate.m */; };
 		BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA855F91AFD1BD200274F28 /* Images.xcassets */; };
@@ -31,6 +35,14 @@
 		BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewController.m; path = Controllers/CCCryptoListViewController.m; sourceTree = "<group>"; };
 		BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewController.h; path = Controllers/CCCryptoDetailsViewController.h; sourceTree = "<group>"; };
 		BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailsViewController.m; path = Controllers/CCCryptoDetailsViewController.m; sourceTree = "<group>"; };
+		BE9F36551AFD365F005F19A2 /* CCCryptoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListViewModel.h; path = ViewModels/CCCryptoListViewModel.h; sourceTree = "<group>"; };
+		BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewModel.m; path = ViewModels/CCCryptoListViewModel.m; sourceTree = "<group>"; };
+		BE9F36591AFD374C005F19A2 /* CCCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCrypto.h; path = Models/CCCrypto.h; sourceTree = "<group>"; };
+		BE9F365A1AFD374C005F19A2 /* CCCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCrypto.m; path = Models/CCCrypto.m; sourceTree = "<group>"; };
+		BE9F365C1AFD3E78005F19A2 /* CCFiatRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCFiatRate.h; path = Models/CCFiatRate.h; sourceTree = "<group>"; };
+		BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFiatRate.m; path = Models/CCFiatRate.m; sourceTree = "<group>"; };
+		BE9F365F1AFD3F09005F19A2 /* CCCryptoDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewModel.h; path = ViewModels/CCCryptoDetailsViewModel.h; sourceTree = "<group>"; };
+		BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailsViewModel.m; path = ViewModels/CCCryptoDetailsViewModel.m; sourceTree = "<group>"; };
 		BEA855E61AFD1BD200274F28 /* CryptoConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA855EA1AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA855EB1AFD1BD200274F28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +118,28 @@
 			name = CryptoDetails;
 			sourceTree = "<group>";
 		};
+		BE9F36541AFD3617005F19A2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F36551AFD365F005F19A2 /* CCCryptoListViewModel.h */,
+				BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */,
+				BE9F365F1AFD3F09005F19A2 /* CCCryptoDetailsViewModel.h */,
+				BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		BE9F36581AFD36EA005F19A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F36591AFD374C005F19A2 /* CCCrypto.h */,
+				BE9F365A1AFD374C005F19A2 /* CCCrypto.m */,
+				BE9F365C1AFD3E78005F19A2 /* CCFiatRate.h */,
+				BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		BEA855DD1AFD1BD200274F28 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				BE9F364A1AFD2F5A005F19A2 /* Controllers */,
+				BE9F36541AFD3617005F19A2 /* ViewModels */,
+				BE9F36581AFD36EA005F19A2 /* Models */,
 				BE9F36481AFD2DC2005F19A2 /* Resources */,
 				BE9F36491AFD2DC9005F19A2 /* Application */,
 				BEA855E91AFD1BD200274F28 /* Supporting Files */,
@@ -261,8 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
+				BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */,
+				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
+				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,
 				BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */,
+				BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */,
 				BEA855EC1AFD1BD200274F28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

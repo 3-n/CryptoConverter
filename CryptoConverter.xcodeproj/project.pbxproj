@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
+		BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EE1AFD1BD200274F28 /* AppDelegate.m */; };
+		BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA855F91AFD1BD200274F28 /* Images.xcassets */; };
+		BEA855FD1AFD1BD200274F28 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */; };
+		BEA856091AFD1BD200274F28 /* CryptoConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEA856031AFD1BD200274F28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEA855DE1AFD1BD200274F28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEA855E51AFD1BD200274F28;
+			remoteInfo = CryptoConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEA855E61AFD1BD200274F28 /* CryptoConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA855EA1AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA855EB1AFD1BD200274F28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEA855ED1AFD1BD200274F28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BEA855EE1AFD1BD200274F28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BEA855F91AFD1BD200274F28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BEA855FC1AFD1BD200274F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BEA856021AFD1BD200274F28 /* CryptoConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA856071AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoConverterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEA855E31AFD1BD200274F28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA855FF1AFD1BD200274F28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEA855DD1AFD1BD200274F28 = {
+			isa = PBXGroup;
+			children = (
+				BEA855E81AFD1BD200274F28 /* CryptoConverter */,
+				BEA856051AFD1BD200274F28 /* CryptoConverterTests */,
+				BEA855E71AFD1BD200274F28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEA855E71AFD1BD200274F28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEA855E61AFD1BD200274F28 /* CryptoConverter.app */,
+				BEA856021AFD1BD200274F28 /* CryptoConverterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEA855E81AFD1BD200274F28 /* CryptoConverter */ = {
+			isa = PBXGroup;
+			children = (
+				BEA855ED1AFD1BD200274F28 /* AppDelegate.h */,
+				BEA855EE1AFD1BD200274F28 /* AppDelegate.m */,
+				BEA855F91AFD1BD200274F28 /* Images.xcassets */,
+				BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */,
+				BEA855E91AFD1BD200274F28 /* Supporting Files */,
+			);
+			path = CryptoConverter;
+			sourceTree = "<group>";
+		};
+		BEA855E91AFD1BD200274F28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEA855EA1AFD1BD200274F28 /* Info.plist */,
+				BEA855EB1AFD1BD200274F28 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEA856051AFD1BD200274F28 /* CryptoConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */,
+				BEA856061AFD1BD200274F28 /* Supporting Files */,
+			);
+			path = CryptoConverterTests;
+			sourceTree = "<group>";
+		};
+		BEA856061AFD1BD200274F28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEA856071AFD1BD200274F28 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEA855E51AFD1BD200274F28 /* CryptoConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA8560C1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverter" */;
+			buildPhases = (
+				BEA855E21AFD1BD200274F28 /* Sources */,
+				BEA855E31AFD1BD200274F28 /* Frameworks */,
+				BEA855E41AFD1BD200274F28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoConverter;
+			productName = CryptoConverter;
+			productReference = BEA855E61AFD1BD200274F28 /* CryptoConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEA856011AFD1BD200274F28 /* CryptoConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA8560F1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverterTests" */;
+			buildPhases = (
+				BEA855FE1AFD1BD200274F28 /* Sources */,
+				BEA855FF1AFD1BD200274F28 /* Frameworks */,
+				BEA856001AFD1BD200274F28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA856041AFD1BD200274F28 /* PBXTargetDependency */,
+			);
+			name = CryptoConverterTests;
+			productName = CryptoConverterTests;
+			productReference = BEA856021AFD1BD200274F28 /* CryptoConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEA855DE1AFD1BD200274F28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = 3n;
+				TargetAttributes = {
+					BEA855E51AFD1BD200274F28 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					BEA856011AFD1BD200274F28 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = BEA855E51AFD1BD200274F28;
+					};
+				};
+			};
+			buildConfigurationList = BEA855E11AFD1BD200274F28 /* Build configuration list for PBXProject "CryptoConverter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEA855DD1AFD1BD200274F28;
+			productRefGroup = BEA855E71AFD1BD200274F28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEA855E51AFD1BD200274F28 /* CryptoConverter */,
+				BEA856011AFD1BD200274F28 /* CryptoConverterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEA855E41AFD1BD200274F28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA855FD1AFD1BD200274F28 /* LaunchScreen.xib in Resources */,
+				BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA856001AFD1BD200274F28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEA855E21AFD1BD200274F28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
+				BEA855EC1AFD1BD200274F28 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA855FE1AFD1BD200274F28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA856091AFD1BD200274F28 /* CryptoConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEA856041AFD1BD200274F28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEA855E51AFD1BD200274F28 /* CryptoConverter */;
+			targetProxy = BEA856031AFD1BD200274F28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEA855FC1AFD1BD200274F28 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEA8560A1AFD1BD200274F28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BEA8560B1AFD1BD200274F28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEA8560D1AFD1BD200274F28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CryptoConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEA8560E1AFD1BD200274F28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CryptoConverter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BEA856101AFD1BD200274F28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CryptoConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoConverter.app/CryptoConverter";
+			};
+			name = Debug;
+		};
+		BEA856111AFD1BD200274F28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CryptoConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoConverter.app/CryptoConverter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEA855E11AFD1BD200274F28 /* Build configuration list for PBXProject "CryptoConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA8560A1AFD1BD200274F28 /* Debug */,
+				BEA8560B1AFD1BD200274F28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEA8560C1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA8560D1AFD1BD200274F28 /* Debug */,
+				BEA8560E1AFD1BD200274F28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BEA8560F1AFD1BD200274F28 /* Build configuration list for PBXNativeTarget "CryptoConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA856101AFD1BD200274F28 /* Debug */,
+				BEA856111AFD1BD200274F28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEA855DE1AFD1BD200274F28 /* Project object */;
+}

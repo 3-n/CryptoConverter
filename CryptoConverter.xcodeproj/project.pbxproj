@@ -14,11 +14,14 @@
 		BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365A1AFD374C005F19A2 /* CCCrypto.m */; };
 		BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */; };
 		BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */; };
+		BE9F36651AFD47D1005F19A2 /* CCDetailsHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36641AFD47D1005F19A2 /* CCDetailsHeader.m */; };
 		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
 		BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EE1AFD1BD200274F28 /* AppDelegate.m */; };
 		BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA855F91AFD1BD200274F28 /* Images.xcassets */; };
 		BEA855FD1AFD1BD200274F28 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */; };
 		BEA856091AFD1BD200274F28 /* CryptoConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */; };
+		BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */; };
+		BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFiatRate.m; path = Models/CCFiatRate.m; sourceTree = "<group>"; };
 		BE9F365F1AFD3F09005F19A2 /* CCCryptoDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewModel.h; path = ViewModels/CCCryptoDetailsViewModel.h; sourceTree = "<group>"; };
 		BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailsViewModel.m; path = ViewModels/CCCryptoDetailsViewModel.m; sourceTree = "<group>"; };
+		BE9F36631AFD47D1005F19A2 /* CCDetailsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailsHeader.h; path = Views/CCDetailsHeader.h; sourceTree = "<group>"; };
+		BE9F36641AFD47D1005F19A2 /* CCDetailsHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailsHeader.m; path = Views/CCDetailsHeader.m; sourceTree = "<group>"; };
 		BEA855E61AFD1BD200274F28 /* CryptoConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA855EA1AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA855EB1AFD1BD200274F28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +62,11 @@
 		BEA856021AFD1BD200274F28 /* CryptoConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA856071AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoConverterTests.m; sourceTree = "<group>"; };
+		BED120161AFD553E006EE28F /* CCCryptoDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailCell.h; path = Views/CCCryptoDetailCell.h; sourceTree = "<group>"; };
+		BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailCell.m; path = Views/CCCryptoDetailCell.m; sourceTree = "<group>"; };
+		BED1201A1AFD5666006EE28F /* CryptoConverter-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoConverter-prefix.pch"; sourceTree = "<group>"; };
+		BED1201B1AFD5AD4006EE28F /* CCCryptoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListTableViewCell.h; path = Views/CCCryptoListTableViewCell.h; sourceTree = "<group>"; };
+		BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListTableViewCell.m; path = Views/CCCryptoListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,8 @@
 			children = (
 				BE9F364D1AFD2FD1005F19A2 /* CCCryptoListViewController.h */,
 				BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */,
+				BED1201B1AFD5AD4006EE28F /* CCCryptoListTableViewCell.h */,
+				BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */,
 			);
 			name = CryptoList;
 			sourceTree = "<group>";
@@ -125,6 +137,8 @@
 		BE9F36501AFD335E005F19A2 /* CryptoDetails */ = {
 			isa = PBXGroup;
 			children = (
+				BED120151AFD5506006EE28F /* Cells */,
+				BE9F36621AFD478D005F19A2 /* Views */,
 				BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */,
 				BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */,
 			);
@@ -151,6 +165,15 @@
 				BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		BE9F36621AFD478D005F19A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F36631AFD47D1005F19A2 /* CCDetailsHeader.h */,
+				BE9F36641AFD47D1005F19A2 /* CCDetailsHeader.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		BEA855DD1AFD1BD200274F28 = {
@@ -191,6 +214,7 @@
 			children = (
 				BEA855EA1AFD1BD200274F28 /* Info.plist */,
 				BEA855EB1AFD1BD200274F28 /* main.m */,
+				BED1201A1AFD5666006EE28F /* CryptoConverter-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,6 +234,15 @@
 				BEA856071AFD1BD200274F28 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BED120151AFD5506006EE28F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BED120161AFD553E006EE28F /* CCCryptoDetailCell.h */,
+				BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C73286D7659414095327FEDF /* Pods */ = {
@@ -356,13 +389,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
+				BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */,
 				BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */,
 				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
 				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,
+				BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */,
 				BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */,
 				BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */,
 				BEA855EC1AFD1BD200274F28 /* main.m in Sources */,
+				BE9F36651AFD47D1005F19A2 /* CCDetailsHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +518,8 @@
 			baseConfigurationReference = 5C27222A60C7718AF9F60C24 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/$PROJECT_NAME/CryptoConverter-prefix.pch";
 				INFOPLIST_FILE = CryptoConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,6 +531,8 @@
 			baseConfigurationReference = 9F6BF039429340FA78066ECB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/$PROJECT_NAME/CryptoConverter-prefix.pch";
 				INFOPLIST_FILE = CryptoConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,14 @@
+//
+//  CryptoConverter-prefix.pch
+//  CryptoConverter
+//
+//  Created by Jaroslaw Gliwinski on 2015-05-08.
+//  Copyright (c) 2015 3n. All rights reserved.
+//
+
+#ifndef CryptoConverter_CryptoConverter_prefix_pch
+#define CryptoConverter_CryptoConverter_prefix_pch
+
+#import <PureLayout/PureLayout.h>
+
+#endif

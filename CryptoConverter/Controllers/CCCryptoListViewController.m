@@ -11,6 +11,9 @@
 // Controllers
 #import "CCCryptoDetailsViewController.h"
 
+// Cells
+#import "CCCryptoListTableViewCell.h"
+
 // ViewModels
 #import "CCCryptoListViewModel.h"
 
@@ -42,7 +45,7 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     
     self.title = NSLocalizedString(@"Select Crypto", nil);
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CCCryptoCellId];
+    [self.tableView registerClass:[CCCryptoListTableViewCell class] forCellReuseIdentifier:CCCryptoCellId];
 }
 
 #pragma mark - UITableViewDataSource
@@ -66,10 +69,11 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
+    CCCryptoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     CCCrypto *crypto = [self cryptoForIndexPath:indexPath];
-    cell.textLabel.text = crypto.code.uppercaseString;
+    cell.codeLabel.text = crypto.code.uppercaseString;
     
     return cell;
 }

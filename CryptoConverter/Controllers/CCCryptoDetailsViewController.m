@@ -8,6 +8,12 @@
 
 #import "CCCryptoDetailsViewController.h"
 
+// Views
+#import "CCDetailsHeader.h"
+
+// Cells
+#import "CCCryptoDetailCell.h"
+
 // ViewModels
 #import "CCCryptoDetailsViewModel.h"
 
@@ -16,9 +22,12 @@
 #import "CCFiatRate.h"
 
 
-static NSString* const CCFiatCellId = @"CCFiatCellId";
+static NSString* const CCFiatRateCellId = @"CCFiatCellId";
+
 
 @interface CCCryptoDetailsViewController ()
+
+@property (nonatomic, strong) CCDetailsHeader *header;
 
 @end
 
@@ -29,7 +38,15 @@ static NSString* const CCFiatCellId = @"CCFiatCellId";
     
     self.title = NSLocalizedString(@"Rates", nil);
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CCFiatCellId];
+    [self.tableView registerClass:[CCCryptoDetailCell class] forCellReuseIdentifier:CCFiatRateCellId];
+    
+    [self setupHeader];
+}
+
+- (void)setupHeader {
+    self.header = [[CCDetailsHeader alloc] init];
+    self.header.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 150);
+    self.tableView.tableHeaderView = self.header;
 }
 
 #pragma mark - Table view data source
@@ -43,11 +60,12 @@ static NSString* const CCFiatCellId = @"CCFiatCellId";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCFiatCellId forIndexPath:indexPath];
+    CCCryptoDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:CCFiatRateCellId forIndexPath:indexPath];
     
     CCFiatRate *fiatRate = self.viewModel.fiatRates[indexPath.row];
     
-    cell.textLabel.text = fiatRate.code.uppercaseString;
+    cell.fiatLabel.text = fiatRate.code.uppercaseString;
+    cell.rateLabel.text = [fiatRate.rate stringValue];
     
     return cell;
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */; };
+		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
 		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
 		BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EE1AFD1BD200274F28 /* AppDelegate.m */; };
 		BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA855F91AFD1BD200274F28 /* Images.xcassets */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		BE9F364D1AFD2FD1005F19A2 /* CCCryptoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListViewController.h; path = Controllers/CCCryptoListViewController.h; sourceTree = "<group>"; };
 		BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewController.m; path = Controllers/CCCryptoListViewController.m; sourceTree = "<group>"; };
+		BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewController.h; path = Controllers/CCCryptoDetailsViewController.h; sourceTree = "<group>"; };
+		BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailsViewController.m; path = Controllers/CCCryptoDetailsViewController.m; sourceTree = "<group>"; };
 		BEA855E61AFD1BD200274F28 /* CryptoConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA855EA1AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA855EB1AFD1BD200274F28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9F364B1AFD2F62005F19A2 /* CryptoList */,
+				BE9F36501AFD335E005F19A2 /* CryptoDetails */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +95,15 @@
 				BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */,
 			);
 			name = CryptoList;
+			sourceTree = "<group>";
+		};
+		BE9F36501AFD335E005F19A2 /* CryptoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */,
+				BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */,
+			);
+			name = CryptoDetails;
 			sourceTree = "<group>";
 		};
 		BEA855DD1AFD1BD200274F28 = {
@@ -249,6 +262,7 @@
 			files = (
 				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
+				BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */,
 				BEA855EC1AFD1BD200274F28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

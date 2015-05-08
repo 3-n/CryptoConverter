@@ -8,6 +8,12 @@
 
 #import "CCCryptoListViewController.h"
 
+// Controllers
+#import "CCCryptoDetailsViewController.h"
+
+
+static NSString* const CCCryptoCellId = @"CCCryptoCellId";
+
 @interface CCCryptoListViewController ()
 
 @end
@@ -18,9 +24,8 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Select Crypto", nil);
-    self.clearsSelectionOnViewWillAppear = NO;
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CCListCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CCCryptoCellId];
 }
 
 #pragma mark - UITableViewDataSource
@@ -34,7 +39,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CCListCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
     
     cell.textLabel.text = @"cell";
     
@@ -44,7 +49,9 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO navigate to detail
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.navigationController pushViewController:[[CCCryptoDetailsViewController alloc] init] animated:YES];
 }
 
 @end

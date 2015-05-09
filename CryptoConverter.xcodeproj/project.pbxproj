@@ -26,6 +26,7 @@
 		BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120231AFD6174006EE28F /* UIFont+CCFonts.m */; };
 		BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */; };
 		BED1202B1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */; };
+		BED120311AFE81A2006EE28F /* CCFiatRatesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120301AFE81A2006EE28F /* CCFiatRatesClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		BED120291AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+CCNumberUtilities.h"; path = "Categories/NSDecimalNumber+CCNumberUtilities.h"; sourceTree = "<group>"; };
 		BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+CCNumberUtilities.m"; path = "Categories/NSDecimalNumber+CCNumberUtilities.m"; sourceTree = "<group>"; };
 		BED1202D1AFE4AAF006EE28F /* CCDetailsHeaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailsHeaderDelegate.h; path = Protocols/CCDetailsHeaderDelegate.h; sourceTree = "<group>"; };
+		BED1202F1AFE81A2006EE28F /* CCFiatRatesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCFiatRatesClient.h; path = Other/CCFiatRatesClient.h; sourceTree = "<group>"; };
+		BED120301AFE81A2006EE28F /* CCFiatRatesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFiatRatesClient.m; path = Other/CCFiatRatesClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,7 @@
 		BED120251AFE006D006EE28F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BED1202E1AFE814B006EE28F /* API Helpers */,
 				BED120261AFE00EF006EE28F /* CCShowDetailTransitionAnimator.h */,
 				BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */,
 			);
@@ -289,6 +293,15 @@
 				BED1202D1AFE4AAF006EE28F /* CCDetailsHeaderDelegate.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BED1202E1AFE814B006EE28F /* API Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BED1202F1AFE81A2006EE28F /* CCFiatRatesClient.h */,
+				BED120301AFE81A2006EE28F /* CCFiatRatesClient.m */,
+			);
+			name = "API Helpers";
 			sourceTree = "<group>";
 		};
 		C73286D7659414095327FEDF /* Pods */ = {
@@ -440,6 +453,7 @@
 				BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */,
 				BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */,
 				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
+				BED120311AFE81A2006EE28F /* CCFiatRatesClient.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
 				BED1202B1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m in Sources */,
 				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,

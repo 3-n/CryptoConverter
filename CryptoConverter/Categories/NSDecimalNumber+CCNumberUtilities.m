@@ -16,7 +16,18 @@
 }
 
 - (NSString *)cc_stringFiatValue {
-    return [[NSDecimalNumber cryptoFormatter] stringFromNumber:self];
+    NSDecimalNumber *biggestAllowed = [NSDecimalNumber decimalNumberWithString:@"999999999"];
+    NSDecimalNumber *smallestAllowed = [NSDecimalNumber decimalNumberWithString:@"0.01"];
+    
+    if ([self compare:smallestAllowed] == NSOrderedAscending) {
+        return [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"less than", nil), [smallestAllowed stringValue]];
+    }
+    
+    if ([self compare:biggestAllowed] == NSOrderedDescending) {
+        return NSLocalizedString(@"bazillion", nil);
+    }
+    
+    return [[NSDecimalNumber fiatFormatter] stringFromNumber:self];
 }
 
 + (NSNumberFormatter *)fiatFormatter {
@@ -38,7 +49,13 @@
     dispatch_once(&onceToken, ^{
         sharedFormatter = [[NSNumberFormatter alloc] init];
         [sharedFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [sharedFormatter setMinimumFractionDigits:0];
+        [sharedFormatter setMaximumFractionDigits:99];
         [sharedFormatter setCurrencySymbol:@""];
+        [sharedFormatter setPositiveSuffix:[sharedFormatter.positiveSuffix stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+        [sharedFormatter setNegativeSuffix:[sharedFormatter.negativeSuffix stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+        [sharedFormatter setLocale:[NSLocale currentLocale]];
+        sharedFormatter.lenient = YES;
     });
     
     return sharedFormatter;

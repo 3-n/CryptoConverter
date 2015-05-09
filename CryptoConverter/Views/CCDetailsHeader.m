@@ -8,7 +8,8 @@
 
 #import "CCDetailsHeader.h"
 
-#import <PureLayout/PureLayout.h>
+// Categories
+#import "NSDecimalNumber+CCNumberUtilities.h"
 
 
 @implementation CCDetailsHeader
@@ -30,10 +31,11 @@
         
         
         _amountInput = [[UITextField alloc] init];
+        _amountInput.delegate = self;
         _amountInput.textAlignment = NSTextAlignmentRight;
         _amountInput.keyboardType = UIKeyboardTypeDecimalPad;
         _amountInput.keyboardAppearance = UIKeyboardAppearanceLight;
-        _amountInput.placeholder = NSLocalizedString(@"enter amount", nil);
+        _amountInput.placeholder = NSLocalizedString(@"enter amount here", nil);
         _amountInput.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"enter amount", nil) attributes:@{ NSFontAttributeName : [UIFont cc_amountFont] }];
         _amountInput.font = [UIFont cc_amountFont];
         _amountInput.textColor = [UIColor cc_primaryTextColor];
@@ -48,6 +50,46 @@
         
     }
     return self;
+}
+
+#pragma mark - UITextFIeldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newText = [[textField text] stringByReplacingCharactersInRange:range withString:string];
+    
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    NSString *decimalSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator];
+    
+    if (![newText length]) {
+        if ([self.delegate respondsToSelector:@selector(detailsHeader:didChangeAmount:rawText:)]) {
+            [self.delegate detailsHeader:self didChangeAmount:[NSDecimalNumber zero] rawText:@""];
+        }
+        return YES;
+    }
+    
+    if ([[newText componentsSeparatedByString:decimalSeparator] count] > 2) {
+        return NO;
+    }
+    
+    NSDecimalNumber *candidateForNumber = [NSDecimalNumber decimalNumberWithString:[newText stringByReplacingOccurrencesOfString:groupingSeparator withString:@""] locale:[NSLocale currentLocale]];
+    
+    if ([candidateForNumber isEqualToNumber:[NSDecimalNumber notANumber]]) {
+        return NO;
+    }
+    
+    if (![newText hasSuffix:decimalSeparator]) {
+        textField.text = [candidateForNumber cc_stringCryptoValue];
+        if ([self.delegate respondsToSelector:@selector(detailsHeader:didChangeAmount:rawText:)]) {
+            [self.delegate detailsHeader:self didChangeAmount:candidateForNumber rawText:textField.text];
+        }
+        return NO;
+    }
+    else {
+        if ([self.delegate respondsToSelector:@selector(detailsHeader:didChangeAmount:rawText:)]) {
+            [self.delegate detailsHeader:self didChangeAmount:candidateForNumber rawText:textField.text];
+        }
+        return YES;
+    }
 }
 
 @end

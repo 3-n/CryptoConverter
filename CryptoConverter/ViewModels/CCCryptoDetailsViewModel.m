@@ -12,6 +12,9 @@
 #import "CCCrypto.h"
 #import "CCFiatRate.h"
 
+// Categories
+#import "NSDecimalNumber+CCNumberUtilities.h"
+
 
 @implementation CCCryptoDetailsViewModel
 
@@ -25,25 +28,13 @@
 
 - (NSString *)amountOfFiatString:(CCFiatRate *)fiat {
     NSDecimalNumber *cryptoFiatRate = [self.crypto.rateToBtc decimalNumberByMultiplyingBy:fiat.rateToBtc];
-    
-    NSDecimalNumber *biggestAllowed = [NSDecimalNumber decimalNumberWithString:@"999999999"];
-    NSDecimalNumber *smallestAllowed = [NSDecimalNumber decimalNumberWithString:@"0.01"];
-    
     NSDecimalNumber *amountInFiat = [self.cryptoAmount decimalNumberByMultiplyingBy:cryptoFiatRate];
     
     if ([self.cryptoAmount compare:[NSDecimalNumber zero]] == NSOrderedSame) {
-        return [cryptoFiatRate stringValue];
+        return [cryptoFiatRate cc_stringFiatValue];
     }
     
-    if ([amountInFiat compare:smallestAllowed] == NSOrderedAscending) {
-        return [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"less than", nil), [smallestAllowed stringValue]];
-    }
-    
-    if ([amountInFiat compare:biggestAllowed] == NSOrderedDescending) {
-        return NSLocalizedString(@"a LOT", nil);
-    }
-    
-    return [amountInFiat stringValue];
+    return [amountInFiat cc_stringFiatValue];
 }
 
 #pragma mark - Temporary

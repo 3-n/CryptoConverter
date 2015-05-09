@@ -14,4 +14,7 @@
 - (NSString *)cc_stringCryptoValue;
 - (NSString *)cc_stringFiatValue;
 
++ (NSNumberFormatter *)fiatFormatter;
++ (NSNumberFormatter *)cryptoFormatter;
+
 @end

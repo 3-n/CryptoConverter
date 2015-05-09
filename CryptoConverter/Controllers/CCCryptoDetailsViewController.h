@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+// Protocols
+#import "CCDetailsHeaderDelegate.h"
+
 
 @class CCCryptoDetailsViewModel;
 
-@interface CCCryptoDetailsViewController : UITableViewController <UITextFieldDelegate>
+@interface CCCryptoDetailsViewController : UITableViewController <CCDetailsHeaderDelegate>
 
 @property (nonatomic, strong) CCCryptoDetailsViewModel *viewModel;
 

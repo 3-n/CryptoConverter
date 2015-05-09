@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CCDetailsHeader : UIView
+// Protocols
+#import "CCDetailsHeaderDelegate.h"
+
+
+@interface CCDetailsHeader : UIView <UITextFieldDelegate>
+
+@property (nonatomic, weak) id<CCDetailsHeaderDelegate> delegate;
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UILabel *cryptoCodeLabel;

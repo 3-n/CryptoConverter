@@ -79,6 +79,7 @@
 		BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCShowDetailTransitionAnimator.m; path = Other/CCShowDetailTransitionAnimator.m; sourceTree = "<group>"; };
 		BED120291AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+CCNumberUtilities.h"; path = "Categories/NSDecimalNumber+CCNumberUtilities.h"; sourceTree = "<group>"; };
 		BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+CCNumberUtilities.m"; path = "Categories/NSDecimalNumber+CCNumberUtilities.m"; sourceTree = "<group>"; };
+		BED1202D1AFE4AAF006EE28F /* CCDetailsHeaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailsHeaderDelegate.h; path = Protocols/CCDetailsHeaderDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +212,7 @@
 		BEA855E81AFD1BD200274F28 /* CryptoConverter */ = {
 			isa = PBXGroup;
 			children = (
+				BED1202C1AFE4A94006EE28F /* Protocols */,
 				BE9F364A1AFD2F5A005F19A2 /* Controllers */,
 				BE9F36541AFD3617005F19A2 /* ViewModels */,
 				BE9F36581AFD36EA005F19A2 /* Models */,
@@ -279,6 +281,14 @@
 				BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		BED1202C1AFE4A94006EE28F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BED1202D1AFE4AAF006EE28F /* CCDetailsHeaderDelegate.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		C73286D7659414095327FEDF /* Pods */ = {

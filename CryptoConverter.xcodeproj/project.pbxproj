@@ -25,6 +25,7 @@
 		BED120211AFD5D51006EE28F /* UIColor+CCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120201AFD5D51006EE28F /* UIColor+CCColors.m */; };
 		BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120231AFD6174006EE28F /* UIFont+CCFonts.m */; };
 		BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */; };
+		BED1202B1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		BED120231AFD6174006EE28F /* UIFont+CCFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CCFonts.m"; path = "Categories/UIFont+CCFonts.m"; sourceTree = "<group>"; };
 		BED120261AFE00EF006EE28F /* CCShowDetailTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCShowDetailTransitionAnimator.h; path = Other/CCShowDetailTransitionAnimator.h; sourceTree = "<group>"; };
 		BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCShowDetailTransitionAnimator.m; path = Other/CCShowDetailTransitionAnimator.m; sourceTree = "<group>"; };
+		BED120291AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+CCNumberUtilities.h"; path = "Categories/NSDecimalNumber+CCNumberUtilities.h"; sourceTree = "<group>"; };
+		BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+CCNumberUtilities.m"; path = "Categories/NSDecimalNumber+CCNumberUtilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				BED120201AFD5D51006EE28F /* UIColor+CCColors.m */,
 				BED120221AFD6174006EE28F /* UIFont+CCFonts.h */,
 				BED120231AFD6174006EE28F /* UIFont+CCFonts.m */,
+				BED120291AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.h */,
+				BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */,
 				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
+				BED1202B1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m in Sources */,
 				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,
 				BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */,
 				BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */,

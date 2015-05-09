@@ -47,6 +47,7 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
 
 - (void)setupHeader {
     self.header = [[CCDetailsHeader alloc] init];
+    self.header.amountInput.delegate = self;
     self.header.cryptoCodeLabel.text = self.viewModel.crypto.code.uppercaseString;
     self.header.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 150);
     self.tableView.tableHeaderView = self.header;
@@ -68,7 +69,7 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
     CCFiatRate *fiatRate = self.viewModel.fiatRates[indexPath.row];
     
     cell.fiatLabel.text = fiatRate.code.uppercaseString;
-    cell.rateLabel.text = [fiatRate.rate stringValue];
+    cell.rateLabel.text = [self.viewModel amountOfFiatString:fiatRate];
     
     return cell;
 }
@@ -80,7 +81,19 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
 #pragma mark - UITextFIeldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newText = [[textField text] stringByReplacingCharactersInRange:range withString:string];
     
+    if (![newText length]) {
+        self.viewModel.cryptoAmount = [NSDecimalNumber zero];
+        [self.tableView reloadData];
+        return YES;
+    }
+    if ([[NSDecimalNumber decimalNumberWithString:newText locale:[NSLocale currentLocale]] isEqualToNumber:[NSDecimalNumber notANumber]]) {
+        return NO;
+    }
+    
+    self.viewModel.cryptoAmount = [NSDecimalNumber decimalNumberWithString:newText locale:[NSLocale currentLocale]];
+    [self.tableView reloadData];
     return YES;
 }
 

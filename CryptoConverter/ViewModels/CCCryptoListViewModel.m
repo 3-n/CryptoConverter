@@ -54,48 +54,56 @@
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"btc";
             crypto.name = @"Bitcoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"ltc";
             crypto.name = @"Litecoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"0.006"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"doge";
             crypto.name = @"Dogecoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"0.00000037"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"nmc";
             crypto.name = @"Namecoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"msc";
             crypto.name = @"Mastercoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"ppc";
             crypto.name = @"Peercoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"xrp";
             crypto.name = @"Ripple";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         }),
         ({
             CCCrypto *crypto = [CCCrypto new];
             crypto.code = @"aur";
             crypto.name = @"Auroracoin";
+            crypto.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"1"];
             crypto;
         })
     ];

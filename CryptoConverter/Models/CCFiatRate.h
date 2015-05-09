@@ -16,6 +16,6 @@
 @property (nonatomic, strong) CCCrypto *crypto;
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSDecimalNumber *rate;
+@property (nonatomic, strong) NSDecimalNumber *rateToBtc;
 
 @end

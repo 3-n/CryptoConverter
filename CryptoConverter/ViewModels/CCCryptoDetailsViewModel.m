@@ -9,6 +9,7 @@
 #import "CCCryptoDetailsViewModel.h"
 
 // Models
+#import "CCCrypto.h"
 #import "CCFiatRate.h"
 
 
@@ -20,6 +21,29 @@
         _fiatRates = [CCCryptoDetailsViewModel tempData];
     }
     return self;
+}
+
+- (NSString *)amountOfFiatString:(CCFiatRate *)fiat {
+    NSDecimalNumber *cryptoFiatRate = [self.crypto.rateToBtc decimalNumberByMultiplyingBy:fiat.rateToBtc];
+    
+    NSDecimalNumber *biggestAllowed = [NSDecimalNumber decimalNumberWithString:@"999999999"];
+    NSDecimalNumber *smallestAllowed = [NSDecimalNumber decimalNumberWithString:@"0.01"];
+    
+    NSDecimalNumber *amountInFiat = [self.cryptoAmount decimalNumberByMultiplyingBy:cryptoFiatRate];
+    
+    if ([self.cryptoAmount compare:[NSDecimalNumber zero]] == NSOrderedSame) {
+        return [cryptoFiatRate stringValue];
+    }
+    
+    if ([amountInFiat compare:smallestAllowed] == NSOrderedAscending) {
+        return [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"less than", nil), [smallestAllowed stringValue]];
+    }
+    
+    if ([amountInFiat compare:biggestAllowed] == NSOrderedDescending) {
+        return NSLocalizedString(@"a LOT", nil);
+    }
+    
+    return [amountInFiat stringValue];
 }
 
 #pragma mark - Temporary
@@ -36,43 +60,43 @@
     return @[
              ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"US Dollar";
-                 fiatRate.name = @"USD";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"240"];
+                 fiatRate.name = @"US Dollar";
+                 fiatRate.code = @"USD";
                  fiatRate;
              }),
              ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"Zloty";
-                 fiatRate.name = @"PLN";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"863"];
+                 fiatRate.name = @"Zloty";
+                 fiatRate.code = @"PLN";
                  fiatRate;
              }),             ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"Euro";
-                 fiatRate.name = @"eur";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"213"];
+                 fiatRate.name = @"Euro";
+                 fiatRate.code = @"eur";
                  fiatRate;
              }),
              ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"Pound";
-                 fiatRate.name = @"GPB";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"2.0"];
+                 fiatRate.name = @"Pound";
+                 fiatRate.code = @"GPB";
                  fiatRate;
              }),
              ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"Yen";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"2.0"];
                  fiatRate.name = @"Yen";
+                 fiatRate.code = @"Yen";
                  fiatRate;
              }),
              ({
                  CCFiatRate *fiatRate = [CCFiatRate new];
-                 fiatRate.rate = [NSDecimalNumber decimalNumberWithString:@"2.0"];
-                 fiatRate.code = @"Ruble";
-                 fiatRate.name = @"rub";
+                 fiatRate.rateToBtc = [NSDecimalNumber decimalNumberWithString:@"2.0"];
+                 fiatRate.name = @"Ruble";
+                 fiatRate.code = @"rub";
                  fiatRate;
              })
         ];

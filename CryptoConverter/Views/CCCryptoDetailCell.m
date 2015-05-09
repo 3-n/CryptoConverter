@@ -24,6 +24,7 @@
         [self.contentView addSubview:_fiatLabel];
         
         _rateLabel = [[UILabel alloc] initForAutoLayout];
+        _rateLabel.textAlignment = NSTextAlignmentRight;
         _rateLabel.font = [UIFont cc_amountFont];
         _rateLabel.textColor = [UIColor cc_primaryTextColor];
         [self.contentView addSubview:_rateLabel];

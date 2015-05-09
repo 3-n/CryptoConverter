@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D2F70146FCCCE82B42E41AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C240EE8DF111B09E4CA2F4 /* libPods.a */; };
 		BE402C761AFEAC1400BB0036 /* UIToolbar+CCToolbars.m in Sources */ = {isa = PBXBuildFile; fileRef = BE402C751AFEAC1400BB0036 /* UIToolbar+CCToolbars.m */; };
+		BE402C781AFEB87A00BB0036 /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE402C771AFEB87A00BB0036 /* LaunchStoryboard.storyboard */; };
 		BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */; };
 		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
 		BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */; };
@@ -19,7 +20,6 @@
 		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
 		BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EE1AFD1BD200274F28 /* AppDelegate.m */; };
 		BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA855F91AFD1BD200274F28 /* Images.xcassets */; };
-		BEA855FD1AFD1BD200274F28 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */; };
 		BEA856091AFD1BD200274F28 /* CryptoConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */; };
 		BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */; };
 		BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */; };
@@ -46,6 +46,7 @@
 		9F6BF039429340FA78066ECB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE402C741AFEAC1400BB0036 /* UIToolbar+CCToolbars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIToolbar+CCToolbars.h"; path = "Categories/UIToolbar+CCToolbars.h"; sourceTree = "<group>"; };
 		BE402C751AFEAC1400BB0036 /* UIToolbar+CCToolbars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIToolbar+CCToolbars.m"; path = "Categories/UIToolbar+CCToolbars.m"; sourceTree = "<group>"; };
+		BE402C771AFEB87A00BB0036 /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		BE9F364D1AFD2FD1005F19A2 /* CCCryptoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListViewController.h; path = Controllers/CCCryptoListViewController.h; sourceTree = "<group>"; };
 		BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewController.m; path = Controllers/CCCryptoListViewController.m; sourceTree = "<group>"; };
 		BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewController.h; path = Controllers/CCCryptoDetailsViewController.h; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		BEA855ED1AFD1BD200274F28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEA855EE1AFD1BD200274F28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BEA855F91AFD1BD200274F28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BEA855FC1AFD1BD200274F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BEA856021AFD1BD200274F28 /* CryptoConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA856071AFD1BD200274F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoConverterTests.m; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA855F91AFD1BD200274F28 /* Images.xcassets */,
-				BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */,
+				BE402C771AFEB87A00BB0036 /* LaunchStoryboard.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA855FD1AFD1BD200274F28 /* LaunchScreen.xib in Resources */,
+				BE402C781AFEB87A00BB0036 /* LaunchStoryboard.storyboard in Resources */,
 				BEA855FA1AFD1BD200274F28 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,18 +489,6 @@
 			targetProxy = BEA856031AFD1BD200274F28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BEA855FB1AFD1BD200274F28 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEA855FC1AFD1BD200274F28 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BEA8560A1AFD1BD200274F28 /* Debug */ = {

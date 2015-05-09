@@ -13,6 +13,11 @@
 #import "CCDetailsHeaderDelegate.h"
 
 
+@interface CCTextField : UITextField
+
+@end
+
+
 @interface CCDetailsHeader : UIView <UITextFieldDelegate>
 
 @property (nonatomic, weak) id<CCDetailsHeaderDelegate> delegate;

@@ -13,6 +13,26 @@
 #import "UIToolbar+CCToolbars.h"
 
 
+@implementation CCTextField
+
+- (CGRect) caretRectForPosition:(UITextPosition *) position {
+    return CGRectZero;
+}
+
+- (NSArray *)selectionRectsForRange:(UITextRange *)range {
+    return nil;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    if (action == @selector(copy:) || action == @selector(selectAll:) || action == @selector(paste:)) {
+        return NO;
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+
+@end
+
+
 @implementation CCDetailsHeader
 
 - (instancetype)init {
@@ -30,7 +50,8 @@
         _cryptoCodeLabel.textColor = [UIColor cc_highlightedTextColor];
         [_contentView addSubview:_cryptoCodeLabel];
         
-        _amountInput = [[UITextField alloc] init];
+        _amountInput = [[CCTextField alloc] init];
+        _amountInput.tintColor = [UIColor cc_tealColor];
         _amountInput.delegate = self;
         _amountInput.textAlignment = NSTextAlignmentRight;
         _amountInput.keyboardType = UIKeyboardTypeDecimalPad;

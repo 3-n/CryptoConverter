@@ -26,7 +26,16 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CCCryptoListViewController alloc] initWithStyle:UITableViewStyleGrouped]];
     
     [self.window makeKeyAndVisible];
+    
+    [self applyAppearance];
+    
     return YES;
+}
+
+- (void)applyAppearance {
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont cc_navbarTitleFont], NSForegroundColorAttributeName : [UIColor cc_darkTealColor] }];
+    [[UINavigationBar appearance] setTintColor:[UIColor cc_darkTealColor]];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor cc_lightTealColor]];
 }
 
 @end

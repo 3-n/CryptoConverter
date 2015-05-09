@@ -15,8 +15,11 @@
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        _codeLabel = [[UILabel alloc] initForAutoLayout];
+        self.backgroundColor = [UIColor cc_backgroundColor];
         
+        _codeLabel = [[UILabel alloc] initForAutoLayout];
+        _codeLabel.font = [UIFont cc_codeCellFont];
+        _codeLabel.textColor = [UIColor cc_primaryTextColor];
         [self.contentView addSubview:_codeLabel];
         
         [_codeLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];

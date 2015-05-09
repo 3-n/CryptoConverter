@@ -11,7 +11,7 @@
 
 @class CCCryptoDetailsViewModel;
 
-@interface CCCryptoDetailsViewController : UITableViewController
+@interface CCCryptoDetailsViewController : UITableViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) CCCryptoDetailsViewModel *viewModel;
 

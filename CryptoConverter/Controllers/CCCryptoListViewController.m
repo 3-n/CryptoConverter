@@ -44,6 +44,7 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     _viewModel = [CCCryptoListViewModel new];
     
     self.title = NSLocalizedString(@"Select Crypto", nil);
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     [self.tableView registerClass:[CCCryptoListTableViewCell class] forCellReuseIdentifier:CCCryptoCellId];
 }
@@ -71,6 +72,8 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CCCryptoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    cell.backgroundColor = indexPath.row%2 ? [UIColor cc_backgroundColor] : [UIColor cc_backgroundColor];
     
     CCCrypto *crypto = [self cryptoForIndexPath:indexPath];
     cell.codeLabel.text = crypto.code.uppercaseString;
@@ -101,6 +104,10 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
     
     [self.navigationController pushViewController:detailsController animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.f;
 }
 
 @end

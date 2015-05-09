@@ -22,6 +22,8 @@
 		BEA856091AFD1BD200274F28 /* CryptoConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA856081AFD1BD200274F28 /* CryptoConverterTests.m */; };
 		BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */; };
 		BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */; };
+		BED120211AFD5D51006EE28F /* UIColor+CCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120201AFD5D51006EE28F /* UIColor+CCColors.m */; };
+		BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120231AFD6174006EE28F /* UIFont+CCFonts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		BED1201A1AFD5666006EE28F /* CryptoConverter-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoConverter-prefix.pch"; sourceTree = "<group>"; };
 		BED1201B1AFD5AD4006EE28F /* CCCryptoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListTableViewCell.h; path = Views/CCCryptoListTableViewCell.h; sourceTree = "<group>"; };
 		BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListTableViewCell.m; path = Views/CCCryptoListTableViewCell.m; sourceTree = "<group>"; };
+		BED1201F1AFD5D51006EE28F /* UIColor+CCColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CCColors.h"; path = "Categories/UIColor+CCColors.h"; sourceTree = "<group>"; };
+		BED120201AFD5D51006EE28F /* UIColor+CCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CCColors.m"; path = "Categories/UIColor+CCColors.m"; sourceTree = "<group>"; };
+		BED120221AFD6174006EE28F /* UIFont+CCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+CCFonts.h"; path = "Categories/UIFont+CCFonts.h"; sourceTree = "<group>"; };
+		BED120231AFD6174006EE28F /* UIFont+CCFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CCFonts.m"; path = "Categories/UIFont+CCFonts.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 				BE9F364A1AFD2F5A005F19A2 /* Controllers */,
 				BE9F36541AFD3617005F19A2 /* ViewModels */,
 				BE9F36581AFD36EA005F19A2 /* Models */,
+				BED1201E1AFD5D1E006EE28F /* Categories */,
 				BE9F36481AFD2DC2005F19A2 /* Resources */,
 				BE9F36491AFD2DC9005F19A2 /* Application */,
 				BEA855E91AFD1BD200274F28 /* Supporting Files */,
@@ -243,6 +250,17 @@
 				BED120171AFD553E006EE28F /* CCCryptoDetailCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		BED1201E1AFD5D1E006EE28F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BED1201F1AFD5D51006EE28F /* UIColor+CCColors.h */,
+				BED120201AFD5D51006EE28F /* UIColor+CCColors.m */,
+				BED120221AFD6174006EE28F /* UIFont+CCFonts.h */,
+				BED120231AFD6174006EE28F /* UIFont+CCFonts.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		C73286D7659414095327FEDF /* Pods */ = {
@@ -389,8 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
+				BED120211AFD5D51006EE28F /* UIColor+CCColors.m in Sources */,
 				BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */,
 				BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */,
+				BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */,
 				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
 				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,

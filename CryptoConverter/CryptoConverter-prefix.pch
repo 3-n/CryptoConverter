@@ -10,5 +10,7 @@
 #define CryptoConverter_CryptoConverter_prefix_pch
 
 #import <PureLayout/PureLayout.h>
+#import "UIColor+CCColors.h"
+#import "UIFont+CCFonts.h"
 
 #endif

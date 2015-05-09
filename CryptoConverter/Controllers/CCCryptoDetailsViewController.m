@@ -70,4 +70,15 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.f;
+}
+
+#pragma mark - UITextFIeldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    return YES;
+}
+
 @end

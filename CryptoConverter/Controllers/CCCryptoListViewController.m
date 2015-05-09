@@ -110,4 +110,18 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     return 80.f;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case CCPopular:
+            return NSLocalizedString(@"Popular", nil);
+            break;
+        case CCAll:
+            return NSLocalizedString(@"All", nil);
+            break;
+        default:
+            return @"";
+            break;
+    }
+}
+
 @end

@@ -23,7 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CCCryptoListViewController alloc] initWithStyle:UITableViewStyleGrouped]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CCCryptoListViewController alloc] initWithStyle:UITableViewStylePlain]];
     
     [self.window makeKeyAndVisible];
     

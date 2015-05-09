@@ -11,7 +11,7 @@
 
 @class CCCryptoListViewModel;
 
-@interface CCCryptoListViewController : UITableViewController
+@interface CCCryptoListViewController : UITableViewController <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) CCCryptoListViewModel *viewModel;
 

@@ -20,6 +20,9 @@
 // Models
 #import "CCCrypto.h"
 
+// Other
+#import "CCShowDetailTransitionAnimator.h"
+
 
 static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 
@@ -40,6 +43,10 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    self.navigationController.delegate = self;
     
     _viewModel = [CCCryptoListViewModel new];
     
@@ -98,8 +105,6 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     CCCryptoDetailsViewController *detailsController = [[CCCryptoDetailsViewController alloc] initWithStyle:UITableViewStylePlain];
     detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
     
@@ -122,6 +127,16 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
             return @"";
             break;
     }
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    if (operation != UINavigationControllerOperationPush) {
+        return nil;
+    }
+    
+    return [CCShowDetailTransitionAnimator new];
 }
 
 @end

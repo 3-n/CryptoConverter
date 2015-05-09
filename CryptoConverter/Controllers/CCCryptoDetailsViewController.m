@@ -36,6 +36,8 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.title = NSLocalizedString(@"Rates", nil);
     
     [self.tableView registerClass:[CCCryptoDetailCell class] forCellReuseIdentifier:CCFiatRateCellId];

@@ -24,6 +24,7 @@
 		BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1201C1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m */; };
 		BED120211AFD5D51006EE28F /* UIColor+CCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120201AFD5D51006EE28F /* UIColor+CCColors.m */; };
 		BED120241AFD6174006EE28F /* UIFont+CCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120231AFD6174006EE28F /* UIFont+CCFonts.m */; };
+		BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		BED120201AFD5D51006EE28F /* UIColor+CCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CCColors.m"; path = "Categories/UIColor+CCColors.m"; sourceTree = "<group>"; };
 		BED120221AFD6174006EE28F /* UIFont+CCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+CCFonts.h"; path = "Categories/UIFont+CCFonts.h"; sourceTree = "<group>"; };
 		BED120231AFD6174006EE28F /* UIFont+CCFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CCFonts.m"; path = "Categories/UIFont+CCFonts.m"; sourceTree = "<group>"; };
+		BED120261AFE00EF006EE28F /* CCShowDetailTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCShowDetailTransitionAnimator.h; path = Other/CCShowDetailTransitionAnimator.h; sourceTree = "<group>"; };
+		BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCShowDetailTransitionAnimator.m; path = Other/CCShowDetailTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,7 @@
 				BE9F36541AFD3617005F19A2 /* ViewModels */,
 				BE9F36581AFD36EA005F19A2 /* Models */,
 				BED1201E1AFD5D1E006EE28F /* Categories */,
+				BED120251AFE006D006EE28F /* Other */,
 				BE9F36481AFD2DC2005F19A2 /* Resources */,
 				BE9F36491AFD2DC9005F19A2 /* Application */,
 				BEA855E91AFD1BD200274F28 /* Supporting Files */,
@@ -261,6 +265,15 @@
 				BED120231AFD6174006EE28F /* UIFont+CCFonts.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		BED120251AFE006D006EE28F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BED120261AFE00EF006EE28F /* CCShowDetailTransitionAnimator.h */,
+				BED120271AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		C73286D7659414095327FEDF /* Pods */ = {
@@ -414,6 +427,7 @@
 				BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
 				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,
+				BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */,
 				BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */,
 				BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */,
 				BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */,

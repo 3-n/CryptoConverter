@@ -36,6 +36,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{ NSFontAttributeName : [UIFont cc_navbarTitleFont], NSForegroundColorAttributeName : [UIColor cc_darkTealColor] }];
     [[UINavigationBar appearance] setTintColor:[UIColor cc_darkTealColor]];
     [[UINavigationBar appearance] setBarTintColor: [UIColor cc_lightTealColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor cc_tealColor]];
 }
 
 @end

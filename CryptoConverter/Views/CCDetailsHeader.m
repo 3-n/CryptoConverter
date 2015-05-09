@@ -10,6 +10,7 @@
 
 // Categories
 #import "NSDecimalNumber+CCNumberUtilities.h"
+#import "UIToolbar+CCToolbars.h"
 
 
 @implementation CCDetailsHeader
@@ -29,12 +30,16 @@
         _cryptoCodeLabel.textColor = [UIColor cc_highlightedTextColor];
         [_contentView addSubview:_cryptoCodeLabel];
         
-        
         _amountInput = [[UITextField alloc] init];
         _amountInput.delegate = self;
         _amountInput.textAlignment = NSTextAlignmentRight;
         _amountInput.keyboardType = UIKeyboardTypeDecimalPad;
         _amountInput.keyboardAppearance = UIKeyboardAppearanceLight;
+        __weak __typeof__(self) weakSelf = self;
+        _amountInput.inputAccessoryView = [UIToolbar accessoryToolbarWithOkBlock:^(id sender) {
+            __strong __typeof__(self) strongSelf = weakSelf;
+            [strongSelf->_amountInput resignFirstResponder];
+        }];
         _amountInput.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"enter amount here", nil) attributes:@{ NSFontAttributeName : [UIFont cc_amountFont] }];
         _amountInput.font = [UIFont cc_amountFont];
         _amountInput.textColor = [UIColor cc_primaryTextColor];

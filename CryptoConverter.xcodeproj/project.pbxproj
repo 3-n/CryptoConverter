@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D2F70146FCCCE82B42E41AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C240EE8DF111B09E4CA2F4 /* libPods.a */; };
+		BE402C761AFEAC1400BB0036 /* UIToolbar+CCToolbars.m in Sources */ = {isa = PBXBuildFile; fileRef = BE402C751AFEAC1400BB0036 /* UIToolbar+CCToolbars.m */; };
 		BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */; };
 		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
 		BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */; };
@@ -43,6 +44,8 @@
 		5C27222A60C7718AF9F60C24 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		69C240EE8DF111B09E4CA2F4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6BF039429340FA78066ECB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BE402C741AFEAC1400BB0036 /* UIToolbar+CCToolbars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIToolbar+CCToolbars.h"; path = "Categories/UIToolbar+CCToolbars.h"; sourceTree = "<group>"; };
+		BE402C751AFEAC1400BB0036 /* UIToolbar+CCToolbars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIToolbar+CCToolbars.m"; path = "Categories/UIToolbar+CCToolbars.m"; sourceTree = "<group>"; };
 		BE9F364D1AFD2FD1005F19A2 /* CCCryptoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoListViewController.h; path = Controllers/CCCryptoListViewController.h; sourceTree = "<group>"; };
 		BE9F364E1AFD2FD1005F19A2 /* CCCryptoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewController.m; path = Controllers/CCCryptoListViewController.m; sourceTree = "<group>"; };
 		BE9F36511AFD3387005F19A2 /* CCCryptoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewController.h; path = Controllers/CCCryptoDetailsViewController.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				BED120231AFD6174006EE28F /* UIFont+CCFonts.m */,
 				BED120291AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.h */,
 				BED1202A1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m */,
+				BE402C741AFEAC1400BB0036 /* UIToolbar+CCToolbars.h */,
+				BE402C751AFEAC1400BB0036 /* UIToolbar+CCToolbars.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA855EF1AFD1BD200274F28 /* AppDelegate.m in Sources */,
+				BE402C761AFEAC1400BB0036 /* UIToolbar+CCToolbars.m in Sources */,
 				BED120211AFD5D51006EE28F /* UIColor+CCColors.m in Sources */,
 				BED1201D1AFD5AD4006EE28F /* CCCryptoListTableViewCell.m in Sources */,
 				BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */,

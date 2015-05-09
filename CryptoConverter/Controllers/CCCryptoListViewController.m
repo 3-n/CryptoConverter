@@ -78,7 +78,6 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CCCryptoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCCryptoCellId forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.backgroundColor = indexPath.row%2 ? [UIColor cc_backgroundColor] : [UIColor cc_backgroundColor];
     
@@ -108,7 +107,9 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     CCCryptoDetailsViewController *detailsController = [[CCCryptoDetailsViewController alloc] initWithStyle:UITableViewStylePlain];
     detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
     
-    [self.navigationController pushViewController:detailsController animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:detailsController animated:YES];
+    });
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

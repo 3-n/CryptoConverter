@@ -11,5 +11,6 @@
 @interface CCCryptoListTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *codeLabel;
+@property (nonatomic, strong) UIImageView *accessoryImageView;
 
 @end

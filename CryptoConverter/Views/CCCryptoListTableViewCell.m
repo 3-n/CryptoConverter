@@ -8,6 +8,13 @@
 
 #import "CCCryptoListTableViewCell.h"
 
+
+@interface CCCryptoListTableViewCell ()
+
+@property (nonatomic, strong) NSArray *codeLabelHorizontalConstraints;
+
+@end
+
 @implementation CCCryptoListTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -22,12 +29,50 @@
         _codeLabel.textColor = [UIColor cc_primaryTextColor];
         [self.contentView addSubview:_codeLabel];
         
-        [_codeLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        _accessoryImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-accessory"]];
+        [_accessoryImageView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+        [self.contentView addSubview:_accessoryImageView];
         
-        [_codeLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:20];
-        [_codeLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:20];
+        [_codeLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        [_accessoryImageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        [_accessoryImageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
+        
+        _codeLabelHorizontalConstraints = [self codeLabelConstraintsForSelected:NO];
+        [self.contentView addConstraints:_codeLabelHorizontalConstraints];
     }
     return self;
+}
+
+- (NSArray *)codeLabelConstraintsForSelected:(BOOL)selected {
+    return [UIView autoCreateConstraintsWithoutInstalling:^{
+        if (selected) {
+            [self.codeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        }
+        else {
+            [self.codeLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+            [self.codeLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.accessoryImageView withOffset:10];
+        }
+    }];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [self.contentView layoutIfNeeded];
+    
+    self.codeLabel.textColor = selected ? [UIColor cc_highlightedTextColor] : [UIColor cc_primaryTextColor];
+    
+    if (selected != self.selected) {
+        [self.contentView removeConstraints:_codeLabelHorizontalConstraints];
+        _codeLabelHorizontalConstraints = [self codeLabelConstraintsForSelected:selected];
+        [self.contentView addConstraints:_codeLabelHorizontalConstraints];
+    }
+    
+    [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
+        [self.contentView layoutIfNeeded];
+        self.accessoryImageView.alpha = !selected;
+    } completion:^(BOOL finished) {
+    }];
+    
+    [super setSelected:selected animated:animated];
 }
 
 @end

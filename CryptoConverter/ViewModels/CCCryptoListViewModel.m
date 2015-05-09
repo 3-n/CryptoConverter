@@ -31,7 +31,9 @@
     self = [super init];
     if (self) {
         _cryptosPopular = [[CCCryptoListViewModel tempData] subarrayWithRange:NSMakeRange(0, 3)];
-        _cryptosAll = [CCCryptoListViewModel tempData];
+        _cryptosAll = [[CCCryptoListViewModel tempData] sortedArrayUsingComparator:^NSComparisonResult(CCCrypto *c1, CCCrypto *c2) {
+            return [c1.code compare:c2.code];
+        }];
         
         _cryptosBySection = @[ _cryptosPopular, _cryptosAll ];
     }

@@ -12,7 +12,19 @@
 @implementation CCFiatBtcRate
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return  @{ @"rate" : @"last" };
+    return  @{ @"rate" : @"last", @"code" : [NSNull null] };
+}
+
++ (NSValueTransformer *)rateJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *rate) {
+        if ([rate isKindOfClass:[NSNumber class]]) {
+            return [(NSNumber *)rate stringValue];
+        } else {
+            return (NSString *)rate;
+        }
+    } reverseBlock:^(NSString *rate) {
+        return rate;
+    }];
 }
 
 @end
@@ -25,11 +37,13 @@
     [self GET:path parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSMutableArray *rates = [NSMutableArray arrayWithCapacity:responseObject.count];
         for (NSString *key in responseObject) {
-            [rates addObject:[[NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[[self class] modelClassesByResourcePath][path]] transformedValue:responseObject[key]]];
+            CCFiatBtcRate *rate = [[NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[[self class] modelClassesByResourcePath][path]] transformedValue:responseObject[key]];
+            rate.code = key;
+            [rates addObject:rate];
         }
         completionBlock([NSArray arrayWithArray:rates], nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        completionBlock(nil, error);
     }];
 }
 

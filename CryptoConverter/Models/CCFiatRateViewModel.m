@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 3n. All rights reserved.
 //
 
-#import "CCFiatRate.h"
+#import "CCFiatRateViewModel.h"
 
 
-@implementation CCFiatRate
+@implementation CCFiatRateViewModel
 
 @end

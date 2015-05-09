@@ -22,6 +22,7 @@
 
 // Other
 #import "CCShowDetailTransitionAnimator.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 static NSString* const CCCryptoCellId = @"CCCryptoCellId";
@@ -49,6 +50,10 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     self.navigationController.delegate = self;
     
     _viewModel = [CCCryptoListViewModel new];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    [self.viewModel getFiatRatesWithCompletion:^(NSArray *fiatBtcRates, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    }];
     
     self.title = NSLocalizedString(@"Select Crypto", nil);
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];

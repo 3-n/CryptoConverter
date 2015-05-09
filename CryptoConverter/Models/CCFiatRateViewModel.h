@@ -11,11 +11,10 @@
 
 @class CCCrypto;
 
-@interface CCFiatRate : NSObject
+@interface CCFiatRateViewModel : NSObject
 
 @property (nonatomic, strong) CCCrypto *crypto;
 @property (nonatomic, strong) NSString *code;
-@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDecimalNumber *rateToBtc;
 
 @end

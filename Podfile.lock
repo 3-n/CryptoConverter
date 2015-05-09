@@ -23,6 +23,7 @@ PODS:
   - Mantle (1.5.4):
     - Mantle/extobjc (= 1.5.4)
   - Mantle/extobjc (1.5.4)
+  - MBProgressHUD (0.9.1)
   - Overcoat (2.1.1):
     - Overcoat/NSURLSession (= 2.1.1)
   - Overcoat/Core (2.1.1):
@@ -33,12 +34,14 @@ PODS:
   - PureLayout (2.0.6)
 
 DEPENDENCIES:
+  - MBProgressHUD
   - Overcoat
   - PureLayout
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Overcoat: a8d02b26f11e72ca10b4d8d786f6df83b3277b28
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
 

@@ -12,7 +12,7 @@
 		BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36521AFD3387005F19A2 /* CCCryptoDetailsViewController.m */; };
 		BE9F36571AFD365F005F19A2 /* CCCryptoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */; };
 		BE9F365B1AFD374C005F19A2 /* CCCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365A1AFD374C005F19A2 /* CCCrypto.m */; };
-		BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */; };
+		BE9F365E1AFD3E78005F19A2 /* CCFiatRateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F365D1AFD3E78005F19A2 /* CCFiatRateViewModel.m */; };
 		BE9F36611AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */; };
 		BE9F36651AFD47D1005F19A2 /* CCDetailsHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F36641AFD47D1005F19A2 /* CCDetailsHeader.m */; };
 		BEA855EC1AFD1BD200274F28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA855EB1AFD1BD200274F28 /* main.m */; };
@@ -51,8 +51,8 @@
 		BE9F36561AFD365F005F19A2 /* CCCryptoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoListViewModel.m; path = ViewModels/CCCryptoListViewModel.m; sourceTree = "<group>"; };
 		BE9F36591AFD374C005F19A2 /* CCCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCrypto.h; path = Models/CCCrypto.h; sourceTree = "<group>"; };
 		BE9F365A1AFD374C005F19A2 /* CCCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCrypto.m; path = Models/CCCrypto.m; sourceTree = "<group>"; };
-		BE9F365C1AFD3E78005F19A2 /* CCFiatRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCFiatRate.h; path = Models/CCFiatRate.h; sourceTree = "<group>"; };
-		BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFiatRate.m; path = Models/CCFiatRate.m; sourceTree = "<group>"; };
+		BE9F365C1AFD3E78005F19A2 /* CCFiatRateViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCFiatRateViewModel.h; path = Models/CCFiatRateViewModel.h; sourceTree = "<group>"; };
+		BE9F365D1AFD3E78005F19A2 /* CCFiatRateViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFiatRateViewModel.m; path = Models/CCFiatRateViewModel.m; sourceTree = "<group>"; };
 		BE9F365F1AFD3F09005F19A2 /* CCCryptoDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCryptoDetailsViewModel.h; path = ViewModels/CCCryptoDetailsViewModel.h; sourceTree = "<group>"; };
 		BE9F36601AFD3F09005F19A2 /* CCCryptoDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCryptoDetailsViewModel.m; path = ViewModels/CCCryptoDetailsViewModel.m; sourceTree = "<group>"; };
 		BE9F36631AFD47D1005F19A2 /* CCDetailsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailsHeader.h; path = Views/CCDetailsHeader.h; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 			children = (
 				BE9F36591AFD374C005F19A2 /* CCCrypto.h */,
 				BE9F365A1AFD374C005F19A2 /* CCCrypto.m */,
-				BE9F365C1AFD3E78005F19A2 /* CCFiatRate.h */,
-				BE9F365D1AFD3E78005F19A2 /* CCFiatRate.m */,
+				BE9F365C1AFD3E78005F19A2 /* CCFiatRateViewModel.h */,
+				BE9F365D1AFD3E78005F19A2 /* CCFiatRateViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -456,7 +456,7 @@
 				BED120311AFE81A2006EE28F /* CCFiatRatesClient.m in Sources */,
 				BE9F364F1AFD2FD1005F19A2 /* CCCryptoListViewController.m in Sources */,
 				BED1202B1AFE3EAB006EE28F /* NSDecimalNumber+CCNumberUtilities.m in Sources */,
-				BE9F365E1AFD3E78005F19A2 /* CCFiatRate.m in Sources */,
+				BE9F365E1AFD3E78005F19A2 /* CCFiatRateViewModel.m in Sources */,
 				BED120281AFE00EF006EE28F /* CCShowDetailTransitionAnimator.m in Sources */,
 				BED120181AFD553E006EE28F /* CCCryptoDetailCell.m in Sources */,
 				BE9F36531AFD3387005F19A2 /* CCCryptoDetailsViewController.m in Sources */,

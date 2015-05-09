@@ -23,7 +23,11 @@ typedef NS_ENUM(NSInteger, CCCryptoListSections) {
 @property (nonatomic, strong) NSArray *cryptosPopular;
 @property (nonatomic, strong) NSArray *cryptosAll;
 
+@property (nonatomic, strong) NSArray *fiatToBtcRates;
+
 - (CCCryptoDetailsViewModel *)viewModelForIndex:(NSInteger)index inSection:(CCCryptoListSections)section;
 - (NSArray *)cryptosArrayForSection:(CCCryptoListSections)section;
+
+- (void)getFiatRatesWithCompletion:(void (^)(NSArray *fiatBtcRates, NSError *error))block;
 
 @end

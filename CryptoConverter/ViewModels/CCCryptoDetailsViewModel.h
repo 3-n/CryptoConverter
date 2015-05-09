@@ -10,7 +10,7 @@
 
 
 @class CCCrypto;
-@class CCFiatRate;
+@class CCFiatRateViewModel;
 
 @interface CCCryptoDetailsViewModel : NSObject
 
@@ -18,6 +18,6 @@
 @property (nonatomic, strong) NSDecimalNumber *cryptoAmount;
 @property (nonatomic, strong) NSArray *fiatRates;
 
-- (NSString *)amountOfFiatString:(CCFiatRate *)fiat;
+- (NSString *)amountOfFiatString:(CCFiatRateViewModel *)fiat;
 
 @end

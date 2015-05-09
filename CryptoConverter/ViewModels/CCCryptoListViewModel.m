@@ -10,9 +10,13 @@
 
 // ViewModels
 #import "CCCryptoDetailsViewModel.h"
+#import "CCFiatRateViewModel.h"
 
 // Models
 #import "CCCrypto.h"
+
+// APIs
+#import "CCFiatRatesClient.h"
 
 
 @interface CCCryptoListViewModel ()
@@ -39,11 +43,42 @@
     
     CCCryptoDetailsViewModel *viewModel = [CCCryptoDetailsViewModel new];
     viewModel.crypto = crypto;
+    
+    if (self.fiatToBtcRates) {
+        NSMutableArray *fiatBtcRates = [NSMutableArray arrayWithCapacity:self.fiatToBtcRates.count];
+        for (CCFiatBtcRate *fiatBtcRate in self.fiatToBtcRates) {
+            CCFiatRateViewModel *viewModel = [CCFiatRateViewModel new];
+            viewModel.code = fiatBtcRate.code;
+            viewModel.rateToBtc = [NSDecimalNumber decimalNumberWithString:fiatBtcRate.rate];
+            [fiatBtcRates addObject:viewModel];
+        }
+        viewModel.fiatRates = fiatBtcRates;
+    }
+    
     return viewModel;
 }
 
 - (NSArray *)cryptosArrayForSection:(CCCryptoListSections)section {
     return self.cryptosBySection[section];
+}
+
+- (void)getFiatRatesWithCompletion:(void (^)(NSArray *fiatBtcRates, NSError *error))block {
+    
+    if ([self needsRateRefresh]) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        [[CCFiatRatesClient sharedClient] getRatesWithCompletion:^(NSArray *fiatBtcRates, NSError *error) {
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            self.fiatToBtcRates = fiatBtcRates;
+            block(fiatBtcRates, error);
+        }];
+    }
+    else {
+        block(self.fiatToBtcRates, nil);
+    }
+}
+
+- (BOOL)needsRateRefresh {
+    return YES;
 }
 
 #pragma mark - Temporary

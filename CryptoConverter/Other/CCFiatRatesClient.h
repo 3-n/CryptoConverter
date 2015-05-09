@@ -12,6 +12,7 @@
 
 @interface CCFiatBtcRate : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *rate;
 
 @end

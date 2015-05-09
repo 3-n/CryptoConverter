@@ -43,7 +43,7 @@
         
         [_amountInput autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 20, 30, 20) excludingEdge:ALEdgeTop];
         [_amountInput autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_cryptoCodeLabel withOffset:5];
-        [_cryptoCodeLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(10, 20, 0, 20) excludingEdge:ALEdgeBottom];
+        [_cryptoCodeLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(11, 20, 0, 20) excludingEdge:ALEdgeBottom];
         [_cryptoCodeLabel autoSetDimension:ALDimensionHeight toSize:80];
         
     }

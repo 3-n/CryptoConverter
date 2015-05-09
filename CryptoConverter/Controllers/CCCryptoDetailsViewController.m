@@ -47,6 +47,7 @@ static NSString* const CCFiatRateCellId = @"CCFiatCellId";
 
 - (void)setupHeader {
     self.header = [[CCDetailsHeader alloc] init];
+    self.header.cryptoCodeLabel.text = self.viewModel.crypto.code.uppercaseString;
     self.header.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 150);
     self.tableView.tableHeaderView = self.header;
 }

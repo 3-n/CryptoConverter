@@ -66,7 +66,7 @@
         [self.contentView addConstraints:_codeLabelHorizontalConstraints];
     }
     
-    [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
+    [UIView animateWithDuration:0.2 delay:0 options:0 animations:^{
         [self.contentView layoutIfNeeded];
         self.accessoryImageView.alpha = !selected;
     } completion:^(BOOL finished) {

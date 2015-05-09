@@ -107,7 +107,7 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
     CCCryptoDetailsViewController *detailsController = [[CCCryptoDetailsViewController alloc] initWithStyle:UITableViewStylePlain];
     detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.navigationController pushViewController:detailsController animated:YES];
     });
 }

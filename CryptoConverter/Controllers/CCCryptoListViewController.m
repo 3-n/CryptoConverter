@@ -104,6 +104,9 @@ static NSString* const CCCryptoCellId = @"CCCryptoCellId";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+    
     CCCryptoDetailsViewController *detailsController = [[CCCryptoDetailsViewController alloc] initWithStyle:UITableViewStylePlain];
     detailsController.viewModel = [self.viewModel viewModelForIndex:indexPath.row inSection:indexPath.section];
     

@@ -42,11 +42,9 @@
         
         [_contentView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         
-        [_amountInput autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 20, 30, 20) excludingEdge:ALEdgeTop];
-        [_amountInput autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_cryptoCodeLabel withOffset:5];
+        [_amountInput autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 5, 20, 20) excludingEdge:ALEdgeTop];
         [_cryptoCodeLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(11, 20, 0, 20) excludingEdge:ALEdgeBottom];
         [_cryptoCodeLabel autoSetDimension:ALDimensionHeight toSize:80];
-        
     }
     return self;
 }
@@ -66,8 +64,24 @@
         return YES;
     }
     
-    if ([[newText componentsSeparatedByString:decimalSeparator] count] > 2) {
+    // no returning YES past this point, only modified newText is passed to textfield.text
+    
+    NSArray *stringComponents = [newText componentsSeparatedByString:decimalSeparator];
+    if ([stringComponents count] > 2) {
         return NO;
+    }
+    
+    
+    NSInteger maxTextLength = 18;
+    if (newText.length > maxTextLength) {
+        newText = [newText substringToIndex:maxTextLength];
+        if ([newText hasSuffix:decimalSeparator]) {
+            [newText substringToIndex:newText.length-2];
+        }
+    }
+    
+    if (newText.length == maxTextLength && [newText hasSuffix:decimalSeparator]) {
+        newText = [newText stringByReplacingOccurrencesOfString:decimalSeparator withString:@""];
     }
     
     NSDecimalNumber *candidateForNumber = [NSDecimalNumber decimalNumberWithString:[newText stringByReplacingOccurrencesOfString:groupingSeparator withString:@""] locale:[NSLocale currentLocale]];
@@ -76,19 +90,24 @@
         return NO;
     }
     
-    if (![newText hasSuffix:decimalSeparator]) {
+    if (![newText containsString:decimalSeparator]) {
         textField.text = [candidateForNumber cc_stringCryptoValue];
         if ([self.delegate respondsToSelector:@selector(detailsHeader:didChangeAmount:rawText:)]) {
             [self.delegate detailsHeader:self didChangeAmount:candidateForNumber rawText:textField.text];
         }
-        return NO;
     }
     else {
+        if ([newText hasPrefix:decimalSeparator]) {
+            textField.text = [NSString stringWithFormat:@"0%@", newText];
+        }
+        else {
+            textField.text = newText;
+        }
         if ([self.delegate respondsToSelector:@selector(detailsHeader:didChangeAmount:rawText:)]) {
             [self.delegate detailsHeader:self didChangeAmount:candidateForNumber rawText:textField.text];
         }
-        return YES;
     }
+    return NO;
 }
 
 @end

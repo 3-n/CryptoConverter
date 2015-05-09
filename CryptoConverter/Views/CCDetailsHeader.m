@@ -35,8 +35,7 @@
         _amountInput.textAlignment = NSTextAlignmentRight;
         _amountInput.keyboardType = UIKeyboardTypeDecimalPad;
         _amountInput.keyboardAppearance = UIKeyboardAppearanceLight;
-        _amountInput.placeholder = NSLocalizedString(@"enter amount here", nil);
-        _amountInput.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"enter amount", nil) attributes:@{ NSFontAttributeName : [UIFont cc_amountFont] }];
+        _amountInput.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"enter amount here", nil) attributes:@{ NSFontAttributeName : [UIFont cc_amountFont] }];
         _amountInput.font = [UIFont cc_amountFont];
         _amountInput.textColor = [UIColor cc_primaryTextColor];
         [_contentView addSubview:_amountInput];
